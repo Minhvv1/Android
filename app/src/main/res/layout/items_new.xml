@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#D1C8C8"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="18dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/anh"
+            android:layout_alignParentTop="true"
+            android:id="@+id/im_picture"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/likeon"
+                android:clickable="true"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:layout_above="@id/ln_date"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#E91E63"
+                android:layout_marginBottom="25dp"
+                android:textStyle="bold"
+                android:text="Mai Anh"
+                android:gravity="left|bottom"
+                android:textSize="35sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="Girl"
+                android:gravity="left|bottom"
+                android:textSize="25sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/shap_bg"
+            android:id="@+id/ln_date"
+            android:layout_alignBottom="@id/im_picture"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:id="@+id/tv_birth"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="7 months"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:background="@drawable/shap_bg"
+                android:textStyle="bold"
+                android:id="@+id/btn_profile"
+                android:text="View Profile  >>"
+                android:gravity="center"
+                android:padding="10dp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
