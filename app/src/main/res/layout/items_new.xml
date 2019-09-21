@@ -1,87 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:background="#D1C8C8"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:padding="18dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
         android:layout_height="wrap_content">
-        <ImageView
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:src="@drawable/anh"
-            android:layout_alignParentTop="true"
-            android:id="@+id/im_picture"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
+
             <ImageView
+                android:id="@+id/im_picture"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/anh" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ln_date"
+                android:orientation="vertical"
+                android:paddingHorizontal="15dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|bottom"
+                    android:text="Mai Anh"
+                    android:textColor="#E91E63"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_gener"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|bottom"
+                    android:text="Girl"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="3dp"
+                android:layout_above="@+id/ln_date"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginLeft="270dp"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/likeon"
-                android:clickable="true"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="18dp"
-            android:layout_above="@id/ln_date"
-            android:orientation="vertical">
-            <TextView
+                android:layout_alignParentRight="true"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border_radius_12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FAF7F7"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/ic_share_black_24dp"
+                        android:clickable="true"
+                        android:scaleType="centerInside" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@drawable/border_radius_12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FAF7F7"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/likeon"
+                        android:clickable="true"
+                        android:scaleType="centerInside" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ln_date"
                 android:layout_width="match_parent"
+                android:background="#4CAF50"
                 android:layout_height="wrap_content"
-                android:textColor="#E91E63"
-                android:layout_marginBottom="25dp"
-                android:textStyle="bold"
-                android:text="Mai Anh"
-                android:gravity="left|bottom"
-                android:textSize="35sp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:text="Girl"
-                android:gravity="left|bottom"
-                android:textSize="25sp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/shap_bg"
-            android:id="@+id/ln_date"
-            android:layout_alignBottom="@id/im_picture"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:textSize="20sp"
-                android:id="@+id/tv_birth"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:text="7 months"
-                android:padding="10dp"
-                />
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:textSize="18sp"
-                android:textColor="#fff"
-                android:background="@drawable/shap_bg"
-                android:textStyle="bold"
-                android:id="@+id/btn_profile"
-                android:text="View Profile  >>"
-                android:gravity="center"
-                android:padding="10dp"
-                />
-        </LinearLayout>
-    </RelativeLayout>
+                android:layout_alignBottom="@id/im_picture"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_birth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="7 months"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="10dp"
+                    android:background="#4CAF50"
+                    android:text="Thông tin >>"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>
