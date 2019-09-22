@@ -15,6 +15,9 @@ public interface Api {
     @POST("get_pets.php")
     Call<ArrayList<Pets>> getPets();
 
+    @POST("get_pet_share.php")
+    Call<ArrayList<Pets>> getPetsShare();
+
     @FormUrlEncoded
     @POST("add_pet.php")
     Call<Pets> insertPet(
