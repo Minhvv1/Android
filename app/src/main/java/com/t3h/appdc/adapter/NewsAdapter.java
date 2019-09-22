@@ -16,12 +16,18 @@ import com.t3h.appdc.R;
 import com.t3h.appdc.model.Pets;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder>{
     private LayoutInflater inflater;
-    private ArrayList<Pets> data;
+    private List<Pets> data;
+    private OnClickPet listener;
 
-    public void setData(ArrayList<Pets> data) {
+    public void setListener(OnClickPet listener) {
+        this.listener = listener;
+    }
+
+    public void setData(List<Pets> data) {
         this.data = data;
         notifyDataSetChanged();
     }
@@ -60,12 +66,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder>{
         }
         public void bindData(Pets p){
             tvName.setText(p.getName());
-//            tvBirth.setText(String.valueOf(p.getAge()));
-//            String gen = "Nàng";
-//            if (p.isGener() == true) {
-//                gen = "Chàng";
-//            }
-//            tvGener.setText(gen);
+            tvBirth.setText(String.valueOf(p.getBirh()));
+            String gen = "Thái Hậu";
+            if (p.isGender() == true) {
+                gen = "Hoàng Thượng";
+            }
+            tvGener.setText(gen);
             Glide.with(imPet)
                     .load(p.getPicture())
                     .placeholder(R.mipmap.ic_launcher)
@@ -77,5 +83,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder>{
         public void onClick(View view) {
 
         }
+    }
+
+    public interface OnClickPet{
+         void OnClickItem(int position);
     }
 }

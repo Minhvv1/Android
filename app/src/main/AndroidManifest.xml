@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ItemActivity">
+        <activity android:name=".DemoLoginActiviy"
+            android:theme="@style/AppTheme.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,9 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProfileActivity"/>
-<!--        <activity android:name=".ItemActivity"/>-->
-        <activity android:name=".EditorActivity"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".ItemActivity"/>
+<!--        <activity android:name=".EditorActivity"/>-->
+<!--        <activity android:name=".MainActivity"/>-->
         <activity android:name=".slide.HomeActivity"/>
     </application>
 

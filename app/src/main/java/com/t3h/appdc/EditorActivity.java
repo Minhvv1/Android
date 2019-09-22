@@ -222,7 +222,7 @@ public class EditorActivity extends AppCompatActivity {
     };
 
     private void setBirth(){
-        String myFormat = "dd MM yyyy";
+        String myFormat = "dd MMMM yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         mBirth.setText(sdf.format(myCalendar.getTime()));
     }

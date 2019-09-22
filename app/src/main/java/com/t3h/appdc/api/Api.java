@@ -2,6 +2,7 @@ package com.t3h.appdc.api;
 
 import com.t3h.appdc.model.Pets;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -12,7 +13,7 @@ import retrofit2.http.POST;
 public interface Api {
 
     @POST("get_pets.php")
-    Call<List<Pets>> getPets();
+    Call<ArrayList<Pets>> getPets();
 
     @FormUrlEncoded
     @POST("add_pet.php")

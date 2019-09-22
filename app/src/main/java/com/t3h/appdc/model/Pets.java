@@ -2,7 +2,9 @@ package com.t3h.appdc.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Pets {
+import java.io.Serializable;
+
+public class Pets implements Serializable {
     @SerializedName("id")
     private int id;
     @SerializedName("name")
